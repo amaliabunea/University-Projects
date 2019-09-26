@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="model.ElementComanda"
+           table="ElementComanda">
+
+        <id name="id" column="ID_ElementComanda" type = "int">
+            <generator class="increment"/>
+        </id>
+        <many-to-one name="Comanda" column="ID_Comanda" class="model.Comanda"/>
+        <many-to-one name="Medicament" column="ID_Medicament" class="model.Medicament"/>
+
+        <property name="cantitate" column ="Cantitate" type="integer"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="model.Medicament"
+           table="Medicament">
+        <id name="nume" column="ID_Medicament" type = "string">
+        </id>
+
+        <property name = "concentratie" type = "float" >
+            <column name = "concentratie"></column>
+        </property>
+
+        <property name = "gramaj" type = "float" >
+            <column name = "gramaj"></column>
+        </property>
+
+        <property name = "cantitate" type = "integer" >
+            <column name = "cantitate"></column>
+        </property>
+
+        <set name = "list" table="MedicamenteComenzi" inverse="false" lazy="true" fetch="select">
+            <key column="ID_Medicament"/>
+            <many-to-many column="ID_Comanda" class="model.Comanda"/>
+        </set>
+
+
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.3977661132812" prefWidth="674.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.LoginController">
+  <children>
+    <ImageView fitHeight="636.3977397111643" fitWidth="681.0" layoutX="-7.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="file:/D:/work/UBB-Semestrul%202/ISS/ISS/ISS/login1.jpg" />
+      </image>
+    </ImageView>
+    <TextField fx:id="usernameTextField" alignment="CENTER" layoutX="276.0" layoutY="279.0" prefHeight="26.0" prefWidth="227.0" promptText="username" />
+    <Button fx:id="loginFarmacistButton" layoutX="69.0" layoutY="401.0" mnemonicParsing="false" onAction="#loginFarmacist" prefHeight="26.0" prefWidth="227.0" text="Pharmacist" />
+    <Button fx:id="loginPersonalButton" layoutX="334.0" layoutY="401.0" mnemonicParsing="false" onAction="#loginPersonal" prefHeight="26.0" prefWidth="227.0" text="Medical Personal" />
+    <PasswordField fx:id="passwordTextField" alignment="CENTER" layoutX="276.0" layoutY="334.0" prefHeight="26.0" prefWidth="227.0" promptText="password" />
+    <Label layoutX="26.0" layoutY="263.0" prefHeight="84.0" prefWidth="164.0" text="LOGIN" textFill="#00ffe0">
+      <effect>
+        <InnerShadow color="#00ccb4" />
+      </effect>
+      <font>
+        <Font name="Baskerville Old Face" size="35.0" />
+      </font>
+    </Label>
+    <Label layoutX="178.0" layoutY="285.0" text="Username:" textFill="BLACK">
+      <font>
+        <Font name="Baskerville Old Face" size="20.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label font="$x1" layoutX="182.0" layoutY="337.0" text="Password:" />
+  </children>
+</AnchorPane>

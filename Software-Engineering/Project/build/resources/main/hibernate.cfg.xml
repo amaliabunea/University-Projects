@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="dialect">org.hibernate.dialect.SQLiteDialect</property>
+        <property name="connection.driver_class">org.sqlite.JDBC</property>
+        <property name="connection.url">jdbc:sqlite:Farmacie.db</property>
+
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <property name="hibernate.enable_lazy_load_no_trans">true</property>
+
+        <mapping resource = "Medicament.hbm.xml"/>
+        <mapping resource = "Comanda.hbm.xml"/>
+        <mapping resource="Farmacie.hbm.xml"/>
+        <mapping resource="Sectie.hbm.xml"/>
+
+    </session-factory>
+</hibernate-configuration>
+

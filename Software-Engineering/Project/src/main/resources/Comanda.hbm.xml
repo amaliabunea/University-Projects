@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="model.Comanda"
+           table="Comanda">
+        <id name="nrComanda" column="ID_Comanda" type = "int">
+            <generator class="increment"/>
+        </id>
+
+        <property name="data" type="LocalDate"></property>
+
+        <property name="status" column ="Status" type="string"/>
+
+        <!--<set name="list" table = "MedicamenteComenzi" inverse="false" lazy="true" fetch="select" >
+            <key column="ID_Comanda"/>
+            <many-to-many column="ID_Medicament" class="model.Medicament"/>
+        </set>-->
+
+        <many-to-one name="personalMedical" column="ID_Sectie" class="model.PersonalMedical"/>
+    </class>
+</hibernate-mapping>

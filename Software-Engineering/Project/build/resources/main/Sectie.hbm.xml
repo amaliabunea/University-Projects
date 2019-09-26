@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="model.Sectie"
+           table="Sectie">
+        <id name="nume" column="ID_Sectie" type = "string">
+        </id>
+
+        <property name = "password" type = "string" >
+            <column name = "password"></column>
+        </property>
+
+        <set name="listaMedicamente" table="Medicament" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ID_Sectie"/>
+            </key>
+            <one-to-many class="model.Medicament"/>
+        </set>
+
+        <set name="listaComenzi" table="Comanda" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ID_Sectie"/>
+            </key>
+            <one-to-many class="model.Comanda"/>
+        </set>
+
+    </class>
+</hibernate-mapping>

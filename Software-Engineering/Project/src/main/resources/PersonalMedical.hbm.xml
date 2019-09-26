@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="model.PersonalMedical"
+           table="PersonalMedical">
+        <id name="nume" column="ID_PersonalMedical" type = "string">
+        </id>
+
+        <property name = "password" type = "string" >
+            <column name = "password"></column>
+        </property>
+
+        <property name="sectie" type="string">
+            <column name="sectie"></column>
+        </property>
+
+        <!--<set name="listaComenzi" table="Comanda" inverse="true" lazy="true" fetch="select">-->
+            <!--<key>-->
+                <!--<column name="ID_Sectie"/>-->
+            <!--</key>-->
+            <!--<one-to-many class="model.Comanda"/>-->
+        <!--</set>-->
+
+
+    </class>
+</hibernate-mapping>
