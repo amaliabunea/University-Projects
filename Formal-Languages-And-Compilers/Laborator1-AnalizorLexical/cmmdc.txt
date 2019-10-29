@@ -1,0 +1,30 @@
+start_program
+    a : positive_int ; b : positive_int ;
+    start
+        read ( a ) ;
+        read ( b ) ;
+        if ( a =:= 0 ) then
+        start
+            write ( b ) ;
+        finish
+        elif ( b =:= 0 ) then
+        start
+            write ( a ) ;
+        finish
+        else
+        start
+            while ( a =/= b )
+            start
+                if ( a > b ) then
+                start
+                    a = a - b ;
+                finish
+                else
+                start
+                    b = b - a ;
+                finish
+            finish
+            write ( a ) ;
+        finish
+    finish
+finish_program

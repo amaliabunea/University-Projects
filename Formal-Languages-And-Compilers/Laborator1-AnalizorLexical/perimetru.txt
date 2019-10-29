@@ -1,0 +1,11 @@
+start_program
+    aria : real ; perimetru : real ; raza : real ; PI : real ;
+    start
+        PI = 3.14 ;
+        read ( raza ) ;
+        aria = PI * ( raza * ( raza ) ) ;
+        perimetru = 2 * ( PI * ( raza ) ) ;
+        write ( aria ) ;
+        write ( perimetru ) ;
+    finish
+finish_program

@@ -1,0 +1,5 @@
+n 0
+numbers 1
+sum 2
+nr 4
+i 5
